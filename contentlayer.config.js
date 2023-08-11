@@ -1,4 +1,7 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
+import highlight from 'rehype-highlight'
+import remarkGfm from 'remark-gfm'; // Import remark-gfm plugin
+
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -40,6 +43,12 @@ export const Post = defineDocumentType(() => ({
     description: {
       type: "string",
     },
+    cover:
+    {
+      type: "string",
+     
+    },
+
     date: {
       type: "date",
       required: true,
@@ -51,4 +60,9 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Post, Page],
+  mdx: {
+    rehypePlugins: [highlight],
+    remarkPlugins: [remarkGfm], // Include the remark-gfm plugin
+  },
 })
+

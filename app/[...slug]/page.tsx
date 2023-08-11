@@ -1,3 +1,4 @@
+
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
 import { allPages } from "contentlayer/generated"
@@ -12,7 +13,7 @@ interface PageProps {
 
 async function getPageFromParams(params: PageProps["params"]) {
   const slug = params?.slug?.join("/")
-  const page = allPages.find((page) => page.slugAsParams === slug)
+  const page = allPages.find((page: { slugAsParams: string }) => page.slugAsParams === slug)
 
   if (!page) {
     null
@@ -37,7 +38,7 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
-  return allPages.map((page) => ({
+  return allPages.map((page: { slugAsParams: string }) => ({
     slug: page.slugAsParams.split("/"),
   }))
 }
@@ -50,11 +51,12 @@ export default async function PagePage({ params }: PageProps) {
   }
 
   return (
-    <article className="py-6 prose dark:prose-invert">
-      <h1>{page.title}</h1>
-      {page.description && <p className="text-xl">{page.description}</p>}
-      <hr />
-      <Mdx code={page.body.code} />
+    <article className="py-6 prose  text-slate-900 dark:text-slate-50 max-w-none mx-auto px-auto ">
+    <h1 className="mx-auto text-center text-slate-900 dark:text-slate-50 ">{page.title}</h1>
+    <hr />
+    <div className=" max-w-none mx-auto px-auto text-slate-900 dark:text-slate-50">
+    <Mdx code={page.body.code} />
+    </div>
     </article>
   )
 }
