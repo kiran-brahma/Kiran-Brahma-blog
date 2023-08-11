@@ -7,5 +7,5 @@ date: 2023-08-11
 
 Demo Page Hello
 
-[[posts/deploying-next-apps|deploying-next-apps]]
+[Recommended Reading](pages/recommended-reading)
 
