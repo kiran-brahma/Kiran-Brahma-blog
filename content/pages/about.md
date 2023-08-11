@@ -14,7 +14,7 @@ My roles across MNC's, Startups and entreprenurial endeavours have given me valu
 
 In 2019, I transitioned from my EV startup to taking over my late father's manpower services business which serves corporates across India.
 
-![](https://i.imgur.com/Ne9G9SZ.jpg)
+<Image src="https://i.imgur.com/Ne9G9SZ.jpg)" alt="Kiran Brahma" width="400" height="400"/>
 
 ## Long Intro
 
