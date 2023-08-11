@@ -1,9 +1,6 @@
 ---
-
 title: Blog
-
 description : blog
-
 ---
 
   
