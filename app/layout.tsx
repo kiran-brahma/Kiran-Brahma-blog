@@ -21,7 +21,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-       className={`antialiased min-w-xl min-h-screen bg-white dark:bg-slate-950 dark:text-slate-50 ${inter.className}`}
+       className={`antialiased min-w-xl min-h-screen bg-white dark:bg-slate-950   ${inter.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-screen-xl mx-auto py-10 px-4 ">
@@ -41,7 +41,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </div>
              
             </header>
-            <main className="pt-10 max-w-none prose text-slate-950 dark:text-slate-50">{children}</main>
+            <main className="pt-10">{children}</main>
             <footer className="footer items-center p-4 pt-10">
   <div className="items-center grid-flow-col">
     <Image src="/self.png" width={50} height={50} alt="Kiran Brahma"/>

@@ -51,7 +51,7 @@ export default async function PagePage({ params }: PageProps) {
   }
 
   return (
-    <article className="py-6 prose  text-slate-900 dark:text-slate-50 max-w-none mx-auto px-auto ">
+    <article className="py-6 prose max-w-none mx-auto px-auto ">
     <h1 className="mx-auto text-center text-slate-900 dark:text-slate-50 ">{page.title}</h1>
     <hr />
     <div className=" max-w-none mx-auto px-auto text-slate-900 dark:text-slate-50">

@@ -6,14 +6,14 @@ export default function Home() {
   const latestPosts = allPosts.slice(0, 4);
 
   return (
-    <div className="prose max-w-none mx-auto gap-10 grid lg:grid-cols-4 sm:grid-cols-1 md:grid-cols-2 text-slate-950 dark:text-slate-50 dark:prose-invert">
+    <div className="prose max-w-none mx-auto gap-10 grid grid-cols-2 text-slate-950 dark:text-slate-50 dark:prose-invert">
       {latestPosts.map((post) => (
         <article key={post._id}>
-          <Link href={post.slug}>
+          <Link className="text-slate-950 dark:text-slate-50" href={post.slug}>
             <h2>{post.title}</h2>
           </Link>
           <Image
-            className="mx-auto"
+ 
             src={post.cover}
             alt={post.title}
             width={250}
