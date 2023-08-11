@@ -1,5 +1,5 @@
 ---
-title: {{tilte}}
+title: 
 description:
 cover:
 date: {{date}}
