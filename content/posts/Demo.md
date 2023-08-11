@@ -7,5 +7,6 @@ date: 2023-08-11
 
 Demo Page Hello
 
-[Recommended Reading](pages/recommended-reading)
+[Recommended Reading](/pages/recommended-reading)
 
+[post](/posts/server-client-components)
