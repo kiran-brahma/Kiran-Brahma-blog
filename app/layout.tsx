@@ -27,14 +27,14 @@ export default function RootLayout({ children }: RootLayoutProps) {
           <div className="max-w-screen-xl mx-auto py-10 px-4 ">
             <header>
               <div className="flex items-center justify-between ">
-                <div className="mr-10">
+                <div className="mr-10 prose dark:prose-invert">
                 <ModeToggle />
                 </div>
-                <nav className="mx-auto text-slate-950 dark:text-slate-50 text-sm font-semibold grid grid-cols-2 gap-4 sm:grid-cols-5">
+                <nav className=" text-slate-950 dark:text-slate-50 text-md font-semibold grid grid-cols-2 gap-10 sm:grid-cols-5">
                   <Link href="/">Home</Link>
-                  <Link  href="/books">Books</Link>
-                  <Link  href="/blog">My Writing</Link>
-                  <Link  href="/articles">Knowledge</Link>
+                  <Link href="/books">Books</Link>
+                  <Link href="/blog">My Writing</Link>
+                  <Link href="/articles">Knowledge</Link>
                   <Link  href="/contact">Contact</Link>
                 </nav>
                 

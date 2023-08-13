@@ -6,7 +6,7 @@ export default function Home() {
   const latestPosts = allPosts.slice(0, 4);
 
   return (
-    <div className="prose max-w-none mx-auto gap-10 grid grid-cols-2 text-slate-950 dark:text-slate-50 dark:prose-invert">
+    <div className="grid grid-cols-2 gap-4">
       {latestPosts.map((post) => (
         <article key={post._id}>
           <Link className="text-slate-950 dark:text-slate-50" href={post.slug}>

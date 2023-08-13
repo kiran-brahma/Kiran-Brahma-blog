@@ -4,7 +4,7 @@ import Latest from '@/components/latest'
 
 export default function Home() {
   return (
-    <div className="prose max-w-none mx-auto pt-10 gap-10 text-slate-950 dark:text-slate-50 dark:prose-invert">
+    <div className="prose max-w-none mx-auto pt-10 text-slate-950 dark:text-slate-50 dark:prose-invert">
       <h1>hey, I am Kiran Brahma 👋</h1>
 <p> I am an entrepreneur managing my own business, which provides security and staffing solutions to organizations across India.</p>
 <p>Management Graduate from <Link href="https://isb.edu" target="_blank">ISB</Link> and Civil Engineering from <Link href="https://nith.ac.in" target="_blank">NIT Hamirpur</Link></p>
@@ -22,7 +22,9 @@ While startups and large organizations get most of the attention, I found little
 This blog is a work in progress. I write out of curiosity, covering a wide range of topics. I hope those reading can find some topics that interest you.</p>
     
     <h2>My Latest Writings</h2>
+    <div className="max-w-none">
     <Latest/>
+    </div>
     </div>
 
   )

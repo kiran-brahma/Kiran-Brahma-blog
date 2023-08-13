@@ -31,6 +31,43 @@ export const Page = defineDocumentType(() => ({
   computedFields,
 }))
 
+export const Articles = defineDocumentType(() => ({
+  name: "Articles",
+  filePathPattern: `articles/**/*.{mdx,md}`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+  },
+  computedFields,
+}))
+
+
+export const Books = defineDocumentType(() => ({
+  name: "Books",
+  filePathPattern: `books/**/*.{mdx,md}`,
+  contentType: "mdx",
+  fields: {
+    title: {
+      type: "string",
+      required: true,
+    },
+    description: {
+      type: "string",
+    },
+    date:{
+      type: 'date'
+    },
+
+  },
+  computedFields,
+}))
+
 export const Post = defineDocumentType(() => ({
   name: "Post",
   filePathPattern: `posts/**/*.{mdx,md}`,
@@ -59,7 +96,7 @@ export const Post = defineDocumentType(() => ({
 
 export default makeSource({
   contentDirPath: "./content",
-  documentTypes: [Post, Page],
+  documentTypes: [Post, Page, Books, Articles],
   mdx: {
     rehypePlugins: [highlight],
     remarkPlugins: [remarkGfm], // Include the remark-gfm plugin
